@@ -1,7 +1,10 @@
 from endless_sky.datafile import DataFile
 from json.encoder import JSONEncoder
 
-df = DataFile("/home/usuario/misc/endless-sky-dev/data/human/ships.txt")
+from os import environ
+from pathlib import Path
+
+df = DataFile(Path(environ["ENDLESS_SKY_PATH"]) / Path("data/human/ships.txt"))
 
 extra_cargo_per_outfit_space = 15 / 20
 extra_outfit_per_cargo_space = 20 / 15
@@ -19,6 +22,8 @@ class ShipStats:
 	sprite: str = ""
 	outfit_space: int = 0
 	cargo_space: int = 0
+	weapon_capacity: int = 0
+	engine_capacity: int = 0
 	bunks: int = 0
 	def __iadd__(self, other):
 		for key in type(other).__annotations__.keys():
@@ -32,7 +37,7 @@ class ShipStats:
 		attributes = next(i.filter_first("attributes"))
 		
 		
-		for k in ("cargo space", "outfit space", "bunks"):
+		for k in ("cargo space", "outfit space", "bunks", "weapon capacity", "engine capacity"):
 			try:
 				kwargs[k.replace(" ", "_")] = int(next(attributes.filter_first(k)).tokens[1])
 			except StopIteration:
@@ -68,5 +73,5 @@ for i in df.root.filter_first("ship"):
 		# print(ship_stats[i.tokens[1]])
 		pass
 		
-with open("file.json", "w") as f:
-	f.write(MyEncoder().encode({k: v.relative() for k, v in ship_stats.items()}))
+with open("data.json", "w") as f:
+	f.write(MyEncoder().encode(ship_stats))
