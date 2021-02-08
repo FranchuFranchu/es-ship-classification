@@ -26,6 +26,13 @@
 		attribute1 = "bunks"
 		attribute2 = "cargo_space"
 		attribute3 = "weapon_capacity"
+		let minx = 1
+		let miny = 1
+		let maxx = 0
+		let maxy = 0
+		let maxv = {}
+		let minv = {}
+		ship_stats = {"Aerie": {"name": "Aerie", "sprite": "ship/aerie", "outfit_space": 390, "cargo_space": 50, "weapon_capacity": 150, "engine_capacity": 95, "bunks": 28}, "Argosy": {"name": "Argosy", "sprite": "ship/argosy", "outfit_space": 270, "cargo_space": 120, "weapon_capacity": 90, "engine_capacity": 80, "bunks": 14}, "Arrow": {"name": "Arrow", "sprite": "ship/arrow", "outfit_space": 180, "cargo_space": 10, "weapon_capacity": 50, "engine_capacity": 75, "bunks": 5}, "Auxiliary": {"name": "Auxiliary", "sprite": "ship/auxiliaryh", "outfit_space": 720, "cargo_space": 250, "weapon_capacity": 160, "engine_capacity": 200, "bunks": 250}, "Bactrian": {"name": "Bactrian", "sprite": "ship/bactrian", "outfit_space": 740, "cargo_space": 530, "weapon_capacity": 300, "engine_capacity": 180, "bunks": 245}, "Barb": {"name": "Barb", "sprite": "ship/barb", "outfit_space": 85, "cargo_space": 0, "weapon_capacity": 24, "engine_capacity": 22, "bunks": 2}, "Bastion": {"name": "Bastion", "sprite": "ship/bastion", "outfit_space": 470, "cargo_space": 110, "weapon_capacity": 190, "engine_capacity": 120, "bunks": 40}, "Behemoth": {"name": "Behemoth", "sprite": "ship/behemoth", "outfit_space": 510, "cargo_space": 490, "weapon_capacity": 280, "engine_capacity": 90, "bunks": 30}, "Berserker": {"name": "Berserker", "sprite": "ship/berserker", "outfit_space": 200, "cargo_space": 10, "weapon_capacity": 35, "engine_capacity": 65, "bunks": 2}, "Blackbird": {"name": "Blackbird", "sprite": "ship/blackbird", "outfit_space": 350, "cargo_space": 60, "weapon_capacity": 90, "engine_capacity": 110, "bunks": 28}, "Bounder": {"name": "Bounder", "sprite": "ship/bounder", "outfit_space": 220, "cargo_space": 40, "weapon_capacity": 50, "engine_capacity": 110, "bunks": 17}, "Boxwing": {"name": "Boxwing", "sprite": "ship/boxwing", "outfit_space": 45, "cargo_space": 80, "weapon_capacity": 0, "engine_capacity": 28, "bunks": 1}, "Bulk Freighter": {"name": "Bulk Freighter", "sprite": "ship/bulk freighter", "outfit_space": 410, "cargo_space": 600, "weapon_capacity": 180, "engine_capacity": 85, "bunks": 18}, "Carrier": {"name": "Carrier", "sprite": "ship/carrier", "outfit_space": 820, "cargo_space": 100, "weapon_capacity": 370, "engine_capacity": 210, "bunks": 184}, "Class C Freighter": {"name": "Class C Freighter", "sprite": "ship/bulk freighter", "outfit_space": 400, "cargo_space": 20, "weapon_capacity": 140, "engine_capacity": 85, "bunks": 43}, "Clipper": {"name": "Clipper", "sprite": "ship/clipper", "outfit_space": 260, "cargo_space": 70, "weapon_capacity": 60, "engine_capacity": 80, "bunks": 9}, "Combat Drone": {"name": "Combat Drone", "sprite": "ship/combat drone", "outfit_space": 58, "cargo_space": 0, "weapon_capacity": 8, "engine_capacity": 28, "bunks": 0}, "Corvette": {"name": "Corvette", "sprite": "ship/corvette", "outfit_space": 420, "cargo_space": 40, "weapon_capacity": 150, "engine_capacity": 100, "bunks": 32}, "Cruiser": {"name": "Cruiser", "sprite": "ship/cruiser", "outfit_space": 760, "cargo_space": 60, "weapon_capacity": 320, "engine_capacity": 170, "bunks": 136}, "Dagger": {"name": "Dagger", "sprite": "ship/dagger", "outfit_space": 90, "cargo_space": 0, "weapon_capacity": 20, "engine_capacity": 30, "bunks": 1}, "Dreadnought": {"name": "Dreadnought", "sprite": "ship/dreadnought", "outfit_space": 790, "cargo_space": 100, "weapon_capacity": 360, "engine_capacity": 190, "bunks": 147}, "Dropship": {"name": "Dropship", "sprite": "ship/dropship", "outfit_space": 100, "cargo_space": 5, "weapon_capacity": 16, "engine_capacity": 40, "bunks": 9}, "Falcon": {"name": "Falcon", "sprite": "ship/falcon", "outfit_space": 540, "cargo_space": 90, "weapon_capacity": 240, "engine_capacity": 150, "bunks": 75}, "Finch": {"name": "Finch", "sprite": "ship/finch", "outfit_space": 110, "cargo_space": 0, "weapon_capacity": 20, "engine_capacity": 40, "bunks": 1}, "Firebird": {"name": "Firebird", "sprite": "ship/firebird", "outfit_space": 400, "cargo_space": 50, "weapon_capacity": 160, "engine_capacity": 100, "bunks": 22}, "Flivver": {"name": "Flivver", "sprite": "ship/flivver", "outfit_space": 130, "cargo_space": 5, "weapon_capacity": 25, "engine_capacity": 45, "bunks": 3}, "Freighter": {"name": "Freighter", "sprite": "ship/freighter", "outfit_space": 250, "cargo_space": 150, "weapon_capacity": 80, "engine_capacity": 70, "bunks": 7}, "Frigate": {"name": "Frigate", "sprite": "ship/frigate", "outfit_space": 410, "cargo_space": 35, "weapon_capacity": 170, "engine_capacity": 100, "bunks": 44}, "Fury": {"name": "Fury", "sprite": "ship/fury", "outfit_space": 160, "cargo_space": 15, "weapon_capacity": 40, "engine_capacity": 60, "bunks": 3}, "Gunboat": {"name": "Gunboat", "sprite": "ship/gunboat", "outfit_space": 270, "cargo_space": 50, "weapon_capacity": 100, "engine_capacity": 90, "bunks": 12}, "Hauler": {"name": "Hauler", "sprite": "ship/hauler i", "outfit_space": 350, "cargo_space": 130, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 12}, "Hauler II": {"name": "Hauler II", "sprite": "ship/hauler ii", "outfit_space": 350, "cargo_space": 260, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 12}, "Hauler III": {"name": "Hauler III", "sprite": "ship/hauler iii", "outfit_space": 350, "cargo_space": 390, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 12}, "Hawk": {"name": "Hawk", "sprite": "ship/hawk", "outfit_space": 200, "cargo_space": 20, "weapon_capacity": 50, "engine_capacity": 70, "bunks": 4}, "Headhunter": {"name": "Headhunter", "sprite": "ship/headhunter", "outfit_space": 250, "cargo_space": 50, "weapon_capacity": 60, "engine_capacity": 80, "bunks": 4}, "Heavy Shuttle": {"name": "Heavy Shuttle", "sprite": "ship/heavy shuttle", "outfit_space": 120, "cargo_space": 35, "weapon_capacity": 10, "engine_capacity": 60, "bunks": 8}, "Lance": {"name": "Lance", "sprite": "ship/lance", "outfit_space": 100, "cargo_space": 0, "weapon_capacity": 20, "engine_capacity": 30, "bunks": 1}, "Leviathan": {"name": "Leviathan", "sprite": "ship/leviathan", "outfit_space": 620, "cargo_space": 80, "weapon_capacity": 240, "engine_capacity": 120, "bunks": 64}, "Manta": {"name": "Manta", "sprite": "ship/manta", "outfit_space": 350, "cargo_space": 20, "weapon_capacity": 140, "engine_capacity": 100, "bunks": 10}, "Modified Argosy": {"name": "Modified Argosy", "sprite": "ship/modified argosy", "outfit_space": 340, "cargo_space": 60, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 12}, "Mule": {"name": "Mule", "sprite": "ship/mule", "outfit_space": 440, "cargo_space": 170, "weapon_capacity": 170, "engine_capacity": 110, "bunks": 43}, "Nest": {"name": "Nest", "sprite": "ship/nest", "outfit_space": 400, "cargo_space": 40, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 14}, "Osprey": {"name": "Osprey", "sprite": "ship/osprey", "outfit_space": 450, "cargo_space": 40, "weapon_capacity": 180, "engine_capacity": 130, "bunks": 24}, "Protector": {"name": "Protector", "sprite": "ship/protector", "outfit_space": 570, "cargo_space": 50, "weapon_capacity": 220, "engine_capacity": 100, "bunks": 69}, "Quicksilver": {"name": "Quicksilver", "sprite": "ship/quicksilver", "outfit_space": 240, "cargo_space": 10, "weapon_capacity": 60, "engine_capacity": 70, "bunks": 6}, "Rainmaker": {"name": "Rainmaker", "sprite": "ship/rainmaker", "outfit_space": 230, "cargo_space": 25, "weapon_capacity": 60, "engine_capacity": 50, "bunks": 14}, "Raven": {"name": "Raven", "sprite": "ship/raven", "outfit_space": 280, "cargo_space": 30, "weapon_capacity": 100, "engine_capacity": 100, "bunks": 13}, "Roost": {"name": "Roost", "sprite": "ship/roost", "outfit_space": 450, "cargo_space": 80, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 16}, "Scout": {"name": "Scout", "sprite": "ship/scout", "outfit_space": 220, "cargo_space": 55, "weapon_capacity": 40, "engine_capacity": 100, "bunks": 12}, "Shuttle": {"name": "Shuttle", "sprite": "ship/shuttle", "outfit_space": 120, "cargo_space": 20, "weapon_capacity": 10, "engine_capacity": 60, "bunks": 6}, "Skein": {"name": "Skein", "sprite": "ship/skein", "outfit_space": 500, "cargo_space": 120, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 18}, "Sparrow": {"name": "Sparrow", "sprite": "ship/sparrow", "outfit_space": 130, "cargo_space": 15, "weapon_capacity": 20, "engine_capacity": 40, "bunks": 2}, "Splinter": {"name": "Splinter", "sprite": "ship/splinter", "outfit_space": 400, "cargo_space": 75, "weapon_capacity": 150, "engine_capacity": 100, "bunks": 21}, "Star Barge": {"name": "Star Barge", "sprite": "ship/star barge", "outfit_space": 130, "cargo_space": 50, "weapon_capacity": 20, "engine_capacity": 40, "bunks": 3}, "Star Queen": {"name": "Star Queen", "sprite": "ship/star queen", "outfit_space": 360, "cargo_space": 60, "weapon_capacity": 120, "engine_capacity": 100, "bunks": 112}, "Surveillance Drone": {"name": "Surveillance Drone", "sprite": "ship/surveillance drone", "outfit_space": 53, "cargo_space": 0, "weapon_capacity": 0, "engine_capacity": 28, "bunks": 0}, "Vanguard": {"name": "Vanguard", "sprite": "ship/vanguard", "outfit_space": 560, "cargo_space": 50, "weapon_capacity": 220, "engine_capacity": 120, "bunks": 45}, "Wasp": {"name": "Wasp", "sprite": "ship/wasp", "outfit_space": 150, "cargo_space": 10, "weapon_capacity": 28, "engine_capacity": 60, "bunks": 2}}
 		function getX(bunks, cargo_space, outfit_space) {
 			return (0.5 * bunks + 0 * cargo_space + 1 * outfit_space) / 3
 		}
@@ -34,15 +41,63 @@
 		function getY(bunks, cargo_space, outfit_space) {
 			return (0 * bunks + 1 * cargo_space + 1 * outfit_space) / 3
 		}
-		$(document).ready(function () {
-			window.ctrlPressed = false;
-			ship_stats = {"Aerie": {"name": "Aerie", "sprite": "ship/aerie", "outfit_space": 390, "cargo_space": 50, "weapon_capacity": 150, "engine_capacity": 95, "bunks": 28}, "Argosy": {"name": "Argosy", "sprite": "ship/argosy", "outfit_space": 270, "cargo_space": 120, "weapon_capacity": 90, "engine_capacity": 80, "bunks": 14}, "Arrow": {"name": "Arrow", "sprite": "ship/arrow", "outfit_space": 180, "cargo_space": 10, "weapon_capacity": 50, "engine_capacity": 75, "bunks": 5}, "Auxiliary": {"name": "Auxiliary", "sprite": "ship/auxiliaryh", "outfit_space": 720, "cargo_space": 250, "weapon_capacity": 160, "engine_capacity": 200, "bunks": 250}, "Bactrian": {"name": "Bactrian", "sprite": "ship/bactrian", "outfit_space": 740, "cargo_space": 530, "weapon_capacity": 300, "engine_capacity": 180, "bunks": 245}, "Barb": {"name": "Barb", "sprite": "ship/barb", "outfit_space": 85, "cargo_space": 0, "weapon_capacity": 24, "engine_capacity": 22, "bunks": 2}, "Bastion": {"name": "Bastion", "sprite": "ship/bastion", "outfit_space": 470, "cargo_space": 110, "weapon_capacity": 190, "engine_capacity": 120, "bunks": 40}, "Behemoth": {"name": "Behemoth", "sprite": "ship/behemoth", "outfit_space": 510, "cargo_space": 490, "weapon_capacity": 280, "engine_capacity": 90, "bunks": 30}, "Berserker": {"name": "Berserker", "sprite": "ship/berserker", "outfit_space": 200, "cargo_space": 10, "weapon_capacity": 35, "engine_capacity": 65, "bunks": 2}, "Blackbird": {"name": "Blackbird", "sprite": "ship/blackbird", "outfit_space": 350, "cargo_space": 60, "weapon_capacity": 90, "engine_capacity": 110, "bunks": 28}, "Bounder": {"name": "Bounder", "sprite": "ship/bounder", "outfit_space": 220, "cargo_space": 40, "weapon_capacity": 50, "engine_capacity": 110, "bunks": 17}, "Boxwing": {"name": "Boxwing", "sprite": "ship/boxwing", "outfit_space": 45, "cargo_space": 80, "weapon_capacity": 0, "engine_capacity": 28, "bunks": 1}, "Bulk Freighter": {"name": "Bulk Freighter", "sprite": "ship/bulk freighter", "outfit_space": 410, "cargo_space": 600, "weapon_capacity": 180, "engine_capacity": 85, "bunks": 18}, "Carrier": {"name": "Carrier", "sprite": "ship/carrier", "outfit_space": 820, "cargo_space": 100, "weapon_capacity": 370, "engine_capacity": 210, "bunks": 184}, "Class C Freighter": {"name": "Class C Freighter", "sprite": "ship/bulk freighter", "outfit_space": 400, "cargo_space": 20, "weapon_capacity": 140, "engine_capacity": 85, "bunks": 43}, "Clipper": {"name": "Clipper", "sprite": "ship/clipper", "outfit_space": 260, "cargo_space": 70, "weapon_capacity": 60, "engine_capacity": 80, "bunks": 9}, "Combat Drone": {"name": "Combat Drone", "sprite": "ship/combat drone", "outfit_space": 58, "cargo_space": 0, "weapon_capacity": 8, "engine_capacity": 28, "bunks": 0}, "Corvette": {"name": "Corvette", "sprite": "ship/corvette", "outfit_space": 420, "cargo_space": 40, "weapon_capacity": 150, "engine_capacity": 100, "bunks": 32}, "Cruiser": {"name": "Cruiser", "sprite": "ship/cruiser", "outfit_space": 760, "cargo_space": 60, "weapon_capacity": 320, "engine_capacity": 170, "bunks": 136}, "Dagger": {"name": "Dagger", "sprite": "ship/dagger", "outfit_space": 90, "cargo_space": 0, "weapon_capacity": 20, "engine_capacity": 30, "bunks": 1}, "Dreadnought": {"name": "Dreadnought", "sprite": "ship/dreadnought", "outfit_space": 790, "cargo_space": 100, "weapon_capacity": 360, "engine_capacity": 190, "bunks": 147}, "Dropship": {"name": "Dropship", "sprite": "ship/dropship", "outfit_space": 100, "cargo_space": 5, "weapon_capacity": 16, "engine_capacity": 40, "bunks": 9}, "Falcon": {"name": "Falcon", "sprite": "ship/falcon", "outfit_space": 540, "cargo_space": 90, "weapon_capacity": 240, "engine_capacity": 150, "bunks": 75}, "Finch": {"name": "Finch", "sprite": "ship/finch", "outfit_space": 110, "cargo_space": 0, "weapon_capacity": 20, "engine_capacity": 40, "bunks": 1}, "Firebird": {"name": "Firebird", "sprite": "ship/firebird", "outfit_space": 400, "cargo_space": 50, "weapon_capacity": 160, "engine_capacity": 100, "bunks": 22}, "Flivver": {"name": "Flivver", "sprite": "ship/flivver", "outfit_space": 130, "cargo_space": 5, "weapon_capacity": 25, "engine_capacity": 45, "bunks": 3}, "Freighter": {"name": "Freighter", "sprite": "ship/freighter", "outfit_space": 250, "cargo_space": 150, "weapon_capacity": 80, "engine_capacity": 70, "bunks": 7}, "Frigate": {"name": "Frigate", "sprite": "ship/frigate", "outfit_space": 410, "cargo_space": 35, "weapon_capacity": 170, "engine_capacity": 100, "bunks": 44}, "Fury": {"name": "Fury", "sprite": "ship/fury", "outfit_space": 160, "cargo_space": 15, "weapon_capacity": 40, "engine_capacity": 60, "bunks": 3}, "Gunboat": {"name": "Gunboat", "sprite": "ship/gunboat", "outfit_space": 270, "cargo_space": 50, "weapon_capacity": 100, "engine_capacity": 90, "bunks": 12}, "Hauler": {"name": "Hauler", "sprite": "ship/hauler i", "outfit_space": 350, "cargo_space": 130, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 12}, "Hauler II": {"name": "Hauler II", "sprite": "ship/hauler ii", "outfit_space": 350, "cargo_space": 260, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 12}, "Hauler III": {"name": "Hauler III", "sprite": "ship/hauler iii", "outfit_space": 350, "cargo_space": 390, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 12}, "Hawk": {"name": "Hawk", "sprite": "ship/hawk", "outfit_space": 200, "cargo_space": 20, "weapon_capacity": 50, "engine_capacity": 70, "bunks": 4}, "Headhunter": {"name": "Headhunter", "sprite": "ship/headhunter", "outfit_space": 250, "cargo_space": 50, "weapon_capacity": 60, "engine_capacity": 80, "bunks": 4}, "Heavy Shuttle": {"name": "Heavy Shuttle", "sprite": "ship/heavy shuttle", "outfit_space": 120, "cargo_space": 35, "weapon_capacity": 10, "engine_capacity": 60, "bunks": 8}, "Lance": {"name": "Lance", "sprite": "ship/lance", "outfit_space": 100, "cargo_space": 0, "weapon_capacity": 20, "engine_capacity": 30, "bunks": 1}, "Leviathan": {"name": "Leviathan", "sprite": "ship/leviathan", "outfit_space": 620, "cargo_space": 80, "weapon_capacity": 240, "engine_capacity": 120, "bunks": 64}, "Manta": {"name": "Manta", "sprite": "ship/manta", "outfit_space": 350, "cargo_space": 20, "weapon_capacity": 140, "engine_capacity": 100, "bunks": 10}, "Modified Argosy": {"name": "Modified Argosy", "sprite": "ship/modified argosy", "outfit_space": 340, "cargo_space": 60, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 12}, "Mule": {"name": "Mule", "sprite": "ship/mule", "outfit_space": 440, "cargo_space": 170, "weapon_capacity": 170, "engine_capacity": 110, "bunks": 43}, "Nest": {"name": "Nest", "sprite": "ship/nest", "outfit_space": 400, "cargo_space": 40, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 14}, "Osprey": {"name": "Osprey", "sprite": "ship/osprey", "outfit_space": 450, "cargo_space": 40, "weapon_capacity": 180, "engine_capacity": 130, "bunks": 24}, "Protector": {"name": "Protector", "sprite": "ship/protector", "outfit_space": 570, "cargo_space": 50, "weapon_capacity": 220, "engine_capacity": 100, "bunks": 69}, "Quicksilver": {"name": "Quicksilver", "sprite": "ship/quicksilver", "outfit_space": 240, "cargo_space": 10, "weapon_capacity": 60, "engine_capacity": 70, "bunks": 6}, "Rainmaker": {"name": "Rainmaker", "sprite": "ship/rainmaker", "outfit_space": 230, "cargo_space": 25, "weapon_capacity": 60, "engine_capacity": 50, "bunks": 14}, "Raven": {"name": "Raven", "sprite": "ship/raven", "outfit_space": 280, "cargo_space": 30, "weapon_capacity": 100, "engine_capacity": 100, "bunks": 13}, "Roost": {"name": "Roost", "sprite": "ship/roost", "outfit_space": 450, "cargo_space": 80, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 16}, "Scout": {"name": "Scout", "sprite": "ship/scout", "outfit_space": 220, "cargo_space": 55, "weapon_capacity": 40, "engine_capacity": 100, "bunks": 12}, "Shuttle": {"name": "Shuttle", "sprite": "ship/shuttle", "outfit_space": 120, "cargo_space": 20, "weapon_capacity": 10, "engine_capacity": 60, "bunks": 6}, "Skein": {"name": "Skein", "sprite": "ship/skein", "outfit_space": 500, "cargo_space": 120, "weapon_capacity": 140, "engine_capacity": 80, "bunks": 18}, "Sparrow": {"name": "Sparrow", "sprite": "ship/sparrow", "outfit_space": 130, "cargo_space": 15, "weapon_capacity": 20, "engine_capacity": 40, "bunks": 2}, "Splinter": {"name": "Splinter", "sprite": "ship/splinter", "outfit_space": 400, "cargo_space": 75, "weapon_capacity": 150, "engine_capacity": 100, "bunks": 21}, "Star Barge": {"name": "Star Barge", "sprite": "ship/star barge", "outfit_space": 130, "cargo_space": 50, "weapon_capacity": 20, "engine_capacity": 40, "bunks": 3}, "Star Queen": {"name": "Star Queen", "sprite": "ship/star queen", "outfit_space": 360, "cargo_space": 60, "weapon_capacity": 120, "engine_capacity": 100, "bunks": 112}, "Surveillance Drone": {"name": "Surveillance Drone", "sprite": "ship/surveillance drone", "outfit_space": 53, "cargo_space": 0, "weapon_capacity": 0, "engine_capacity": 28, "bunks": 0}, "Vanguard": {"name": "Vanguard", "sprite": "ship/vanguard", "outfit_space": 560, "cargo_space": 50, "weapon_capacity": 220, "engine_capacity": 120, "bunks": 45}, "Wasp": {"name": "Wasp", "sprite": "ship/wasp", "outfit_space": 150, "cargo_space": 10, "weapon_capacity": 28, "engine_capacity": 60, "bunks": 2}}
-			let minx = 1
-			let miny = 1
-			let maxx = 0
-			let maxy = 0
-			let maxv = {}
-			let minv = {}
+		
+		function reposition()
+		{
+			minx = 1
+			miny = 1
+			maxx = 0
+			maxy = 0
+			maxv = {}
+			minv = {}
+			for (var i = 0; i < Object.keys(ship_stats).length; i++) {
+				let k = Object.keys(ship_stats)[i]
+				let v = ship_stats[k]
+				
+				if (v.invalid) {
+					continue
+				}
+			
+				
+				let x = (0.5 * v[attribute1 + "_relative"] + 0 * v[attribute2 + "_relative"] + 1 * v[attribute3 + "_relative"]) / 3
+				let y = (0 * v[attribute1 + "_relative"] + 1 * v[attribute2 + "_relative"] + 1 * v[attribute3 + "_relative"]) / 3
+				
+				minx = Math.min(minx, x)
+				miny = Math.min(miny, y)
+				maxx = Math.max(maxx, x)
+				maxy = Math.max(maxy, y)
+				
+			}
+			console.log(minx)
+			
+			for (var i = 0; i < Object.keys(ship_stats).length; i++) {
+				let k = Object.keys(ship_stats)[i]
+				let v = ship_stats[k]
+				
+				let x = getX(v[attribute1 + "_relative"], v[attribute2 + "_relative"], v[attribute3 + "_relative"])
+				let y = getY(v[attribute1 + "_relative"], v[attribute2 + "_relative"], v[attribute3 + "_relative"])
+				for (var j = 0; j < Object.keys(v).length; j++) {
+					let k2 = Object.keys(v)[j]
+					if (maxv[k2] === undefined || maxv[k2] < v[k2]) {
+						maxv[k2] = v[k2]
+					}
+					if (minv[k2] === undefined || minv[k2] > v[k2]) {
+						minv[k2] = v[k2]
+					}
+				}
+				
+				x = (x - minx) / (maxx - minx)
+				y = (y - miny) / (maxy - miny)
+				
+				$(".ship-item[data-idx=" + i + "]")
+					.attr("data-y", y)
+					.attr("data-x", x)
+				}
+				
+		}
+		
+		function loadRelatives() {
+			
 			for (var i = 0; i < Object.keys(ship_stats).length; i++) {
 				let k = Object.keys(ship_stats)[i]
 				let v = ship_stats[k]
@@ -59,35 +114,50 @@
 				v[attribute2 + "_relative"] = v[attribute2] / total
 				v[attribute3 + "_relative"] = v[attribute3] / total
 				
-				let x = getX(v[attribute1 + "_relative"], v[attribute2 + "_relative"], v[attribute3 + "_relative"])
-				let y = getY(v[attribute1 + "_relative"], v[attribute2 + "_relative"], v[attribute3 + "_relative"])
-				for (var j = 0; j < Object.keys(v).length; j++) {
-					let k2 = Object.keys(v)[j]
-					if (maxv[k2] === undefined || maxv[k2] < v[k2]) {
-						maxv[k2] = v[k2]
-					}
-					if (minv[k2] === undefined || minv[k2] > v[k2]) {
-						minv[k2] = v[k2]
-					}
-				}
-				minx = Math.min(minx, x)
-				miny = Math.min(miny, y)
-				maxx = Math.max(maxx, x)
-				maxy = Math.max(maxy, y)
 			}
+			
+		}
+		
+		function drawRotatedText(ctx, newx, newy, text, angle, off) {
+			ctx.save();
+			ctx.translate(newx, newy);
+			ctx.rotate(angle * Math.PI / 180);
+			if (off === undefined)
+			{
+				off = 0
+			}
+			ctx.fillText(text, off, 0);
+			ctx.restore();
+		}
+		
+		function arrowTo(ctx, start_x, start_y, x, y, angle)
+		{
+			if (angle === undefined)
+			{
+				angle = Math.PI / 180 * -60
+			}
+			ctx.moveTo(start_x, start_y)
+			ctx.lineTo(x, y)
+			let arrowAngle = Math.atan2(y - start_y, x - start_x)
+			
+			ctx.lineTo(x + Math.sin(-arrowAngle + angle) * 20, y + Math.cos(-arrowAngle + angle) * 20)
+			ctx.moveTo(x, y)
+			ctx.lineTo(x + Math.sin(-arrowAngle - angle - Math.PI) * 20, y + Math.cos(-arrowAngle - angle - Math.PI) * 20)
+			
+		}
+		
+		$(document).ready(function () {
+			window.ctrlPressed = false;
+			
+			loadRelatives()
 			
 			for (var i = 0; i < Object.keys(ship_stats).length; i++) {
 				let k = Object.keys(ship_stats)[i]
 				let v = ship_stats[k]
-				let x = (0.5 * v[attribute1 + "_relative"] + 0 * v[attribute2 + "_relative"] + 1 * v[attribute3 + "_relative"]) / 3
-				let y = (0 * v[attribute1 + "_relative"] + 1 * v[attribute2 + "_relative"] + 1 * v[attribute3 + "_relative"]) / 3
 				if (v.invalid)
 				{
-					x = 0.5
-					y = 0.5
+					continue
 				}
-				x = (x - minx) / (maxx - minx)
-				y = (y - miny) / (maxy - miny)
 				$("main").append($("<div/>")
 					.attr("width", 50)
 					.addClass("ship-item")
@@ -96,11 +166,11 @@
 						.attr("src", "https://github.com/endless-sky/endless-sky/raw/master/images/" + v.sprite + ".png")
 						.on("error", (ev) => {if(ev.target.src != "https://github.com/endless-sky/endless-sky/raw/master/images/" + v.src + "=0.png") ev.target.src = "https://github.com/endless-sky/endless-sky/raw/master/images/" + v.sprite + "=0.png"}))
 					//.append($("<span/>").text(v["name"]))
-					.attr("data-y", y)
-					.attr("data-x", x)
 					.attr("data-name", v.name)
+					.attr("data-idx", i)
 				)
 			}
+			reposition()
 			function transformX(x)
 			{
 				return 0.7 * (x * document.documentElement.clientWidth) / window.bodyScale
@@ -118,7 +188,7 @@
 					.attr("height", transformY(maxy) * 4)
 					.width(transformX(maxx) * 4)
 					.height(transformY(maxy) * 4)
-				$("div.ship-item").each((idx, i) => {	
+				$(".ship-item").each((idx, i) => {	
 					$(i)
 						.css("transform", "scale(" + pxRatio ** 0.5 * 0.9 + ")" + " translate(-50%, -50%)")
 						.css("left", transformX(parseFloat($(i).attr("data-x"))))
@@ -137,7 +207,25 @@
 				ctx.lineTo(transformX(0.5), transformY(0))
 				ctx.stroke()
 				ctx.closePath()
+				
+				ctx.beginPath()
+				arrowTo(ctx, transformX(0.6), transformY(0.6), transformX(0.9), transformY(.9))
+				arrowTo(ctx, transformX(0.4), transformY(0.6), transformX(0.1), transformY(.9))
+				arrowTo(ctx, transformX(0.5), transformY(0.4), transformX(0.5), transformY(.1))
+				ctx.stroke()
+				ctx.closePath()
+				
+      			ctx.font = "30px Arial"
+				ctx.textAlign = "left";
+				drawRotatedText(ctx, transformX(0.6), transformY(0.6) - 10, "More weapon capacity", 180 * Math.atan2(transformY(0.9) - transformY(0.6), transformX(0.9) - transformX(0.6)) / Math.PI)
 			
+				
+				ctx.textAlign = "right";
+				drawRotatedText(ctx, transformX(0.4), transformY(0.6) - 10, "More cargo space", 180 * Math.atan2(transformY(0.6) - transformY(0.9), transformX(0.4) - transformX(0.1)) / Math.PI)
+				
+				ctx.textAlign = "left";
+				drawRotatedText(ctx, transformX(0.5) + 10, transformY(0.1), "More bunks", 90)
+				
 				window.scroll(document.documentElement.scrollLeft / window.bodyScale, document.documentElement.scrollTop / window.bodyScale)
 			}	
 			window.bodyScale = 0.5
