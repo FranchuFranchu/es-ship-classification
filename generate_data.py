@@ -1,10 +1,10 @@
 from endless_sky.datafile import DataFile
 from json.encoder import JSONEncoder
+from glob import glob
+from itertools import chain
 
 from os import environ
 from pathlib import Path
-
-df = DataFile(Path(environ["ENDLESS_SKY_PATH"]) / Path("data/human/ships.txt"))
 
 extra_cargo_per_outfit_space = 15 / 20
 extra_outfit_per_cargo_space = 20 / 15
@@ -25,6 +25,7 @@ class ShipStats:
 	weapon_capacity: int = 0
 	engine_capacity: int = 0
 	bunks: int = 0
+	path: str = ""
 	def __iadd__(self, other):
 		for key in type(other).__annotations__.keys():
 			if hasattr(self, key):
@@ -32,6 +33,8 @@ class ShipStats:
 	
 	@classmethod
 	def from_datanode(ShipStats, i):
+		if not len(list(i.filter_first("sprite"))):
+			return
 		kwargs = {"name": i.tokens[1], "sprite": next(i.filter_first("sprite")).tokens[1]}
 		
 		attributes = next(i.filter_first("attributes"))
@@ -65,13 +68,18 @@ class MyEncoder(JSONEncoder):
 		return {k: getattr(o, k) for k in o.__class__.__annotations__.keys()}
 ship_stats = {}
 
-for i in df.root.filter_first("ship"):
-	if len(i.tokens) == 2:
-		ship_stats[i.tokens[1]] = ShipStats.from_datanode(i)
-	else:
-		# Variants are ignored, for now
-		# print(ship_stats[i.tokens[1]])
-		pass
+
+for path in Path(environ["ENDLESS_SKY_PATH"]).glob("**/*.txt"):
+	print(path)
+	for i in DataFile(path).root.filter_first("ship"):
+		if len(i.tokens) == 2:
+			ship_stats[i.tokens[1]] = ShipStats.from_datanode(i)
+			if ship_stats[i.tokens[1]]:
+				ship_stats[i.tokens[1]].path = str(path).split(environ["ENDLESS_SKY_PATH"], 1)[-1]
+		else:
+			# Variants are ignored, for now
+			# print(ship_stats[i.tokens[1]])
+			pass
 		
 with open("data.json", "w") as f:
 	f.write(MyEncoder().encode(ship_stats))
