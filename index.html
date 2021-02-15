@@ -368,6 +368,10 @@
 					.attr("value", paths[i])
 					.on("input", retoggleVisibility)
 				
+				if (paths[i] == "data/human/ships.txt") {
+					e.attr("checked", true)
+				}
+				
 				if (paths[i].includes("data/human")) {
 					$("#enabled-files .non-spoiler").append(e)
 				} else {
